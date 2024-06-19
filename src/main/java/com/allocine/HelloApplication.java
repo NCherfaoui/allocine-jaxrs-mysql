@@ -1,4 +1,4 @@
-package com.allocine.allocinejaxrs;
+package com.allocine;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
