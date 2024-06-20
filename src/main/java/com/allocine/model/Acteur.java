@@ -1,22 +1,36 @@
 package com.allocine.model;
 
 import jakarta.persistence.*;
-import java.util.Set;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "acteurs")
 public class Acteur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
+    @Column
     private String name;
-    @Lob
-    private byte[] photo;
+    @Column
+    private String photo;
 
-    @ManyToMany(mappedBy = "acteurs")
-    private Set<Film> films;
 
-    // Getters and Setters
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+
+    public Acteur() {
+
+    }
+
 
     public int getId() {
         return id;
@@ -29,25 +43,16 @@ public class Acteur {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public byte[] getPhoto() {
-        return photo;
-    }
 
-    public void setPhoto(byte[] photo) {
+    public Acteur(int id, String name, String photo) {
+        this.id = id;
+        this.name = name;
         this.photo = photo;
     }
-
-    public Set<Film> getFilms() {
-        return films;
-    }
-
-    public void setFilms(Set<Film> films) {
-        this.films = films;
-    }
-
+    @ManyToMany(mappedBy = "acteurs")
+    private List<Film> films = new ArrayList<>();
 }

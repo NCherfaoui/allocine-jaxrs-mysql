@@ -1,3 +1,4 @@
+
 package com.allocine.model;
 
 import jakarta.persistence.*;
@@ -9,10 +10,10 @@ public class Genre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @Lob
-    private byte[] photo;
 
-    // Getters and Setters
+    public Genre() {
+
+    }
 
     public int getId() {
         return id;
@@ -30,12 +31,19 @@ public class Genre {
         this.name = name;
     }
 
-    public byte[] getPhoto() {
+    public Genre(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Basic
+    private String photo;
+
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(byte[] photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
-
 }

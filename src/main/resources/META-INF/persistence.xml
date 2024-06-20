@@ -10,7 +10,7 @@
         <class>com.allocine.model.Realisateur</class>
         <class>com.allocine.model.Genre</class>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://mysql:3306/allocine"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/allocine"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="password"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
