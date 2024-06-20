@@ -3,6 +3,7 @@ package com.allocine.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "genres")
 public class Realisateur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
