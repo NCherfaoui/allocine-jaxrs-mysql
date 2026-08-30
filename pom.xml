@@ -27,9 +27,9 @@
         </dependency>
         <!-- Hibernate Core -->
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.6.0.Final</version>
+            <version>7.4.7.Final</version>
         </dependency>
         <!-- MySQL Connector -->
         <dependency>
